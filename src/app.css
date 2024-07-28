@@ -1,0 +1,37 @@
+:root {
+	font-size: 21px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+
+	--text-1: #90E7F7;
+	--text-2: #666;
+	
+	--bg-1: #27343A;
+	--bg-2: #9EA5A8;
+	--bg-3: #750615;
+	--bg-4: #222629;
+}
+
+body {
+	color: var(--text-1);
+	background-color: var(--bg-1);
+	margin: 0;
+	padding: 0;
+}
+
+body::-webkit-scrollbar {
+	width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+	background: var(--bg-1);
+}
+
+body::-webkit-scrollbar-thumb {
+	background: var(--bg-2);
+}
+
+main {
+	margin-left: 5rem;
+	padding: 1rem;
+}
