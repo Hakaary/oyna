@@ -4,11 +4,12 @@
 	font-weight: 600;
 
 	--text-1: #90e7f7;
-	--text-2: #666;
+	--text-2: #6e1616;
+	--text-3: #878787;
 
 	--bg-1: #27343a;
 	--bg-2: #9ea5a8;
-	--bg-3: #750615;
+	--bg-3: #cd412b;
 	--bg-4: #222629;
 }
 
@@ -29,6 +30,11 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
 	background: var(--bg-2);
+}
+
+ul {
+	padding: 0;
+	margin: 0;
 }
 
 main {
