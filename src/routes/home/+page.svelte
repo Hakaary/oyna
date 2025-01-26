@@ -1,5 +1,5 @@
 <script>
-	import TextScroller from '../../lib/textScroller/TextScroller.svelte';
+	import TextChanger from '$lib/textChanger/TextChanger.svelte';
 </script>
 
 <main id="home">
@@ -16,7 +16,7 @@
 		<li class="column-1-element space" />
 		<li class="column-1-element window">
 			<span class="column-1-text window">
-				and this is my <TextScroller color="var(--text-3)" />
+				and this is my <TextChanger color="var(--text-3)" />
 			</span>
 		</li>
 		<li class="column-1-element window">
@@ -62,6 +62,11 @@
 	.column-1-element.window {
 		font-size: 50px;
 		color: var(--text-1);
+	}
+
+	.column-1-text.window {
+		display: flex;
+		align-items: center;
 	}
 
 	@media (min-width: 1351px) {

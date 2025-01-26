@@ -147,6 +147,7 @@
 		margin-left: 5rem;
 		animation: fadeIn 0.2s;
 		cursor: default;
+		z-index: 9998;
 	}
 
 	.cover {
