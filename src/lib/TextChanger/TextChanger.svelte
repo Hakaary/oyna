@@ -2,19 +2,19 @@
 	import { onMount, onDestroy } from 'svelte';
 
 	const words = [
-		"\u00A0ventana",
-		"\u00A0fenêtre",
-		"\u00A0окно",
-		"\u00A0窗口",
-		"\u00A0finestra",
-		"\u00A0raam",
-		"\u00A0Fenster",
-		"\u00A0oyna",
-		"\u00A0vindu",
-		"\u00A0窓",
-		"\u00A0fereastră",
-		"\u00A0window",
-		"\u00A0fönster",
+		'\u00A0ventana',
+		'\u00A0fenêtre',
+		'\u00A0окно',
+		'\u00A0窗口',
+		'\u00A0finestra',
+		'\u00A0raam',
+		'\u00A0Fenster',
+		'\u00A0oyna',
+		'\u00A0vindu',
+		'\u00A0窓',
+		'\u00A0fereastră',
+		'\u00A0window',
+		'\u00A0fönster'
 	];
 
 	export let color = 'white';

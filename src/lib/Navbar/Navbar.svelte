@@ -1,11 +1,11 @@
 <script>
-	import HomeIcon from '$lib/navbar/icons/HomeIcon.svelte';
-	import RoadMapIcon from '$lib/navbar/icons/RoadmapIcon.svelte';
-	import EducationIcon from '$lib/navbar/icons/EducationIcon.svelte';
-	import ProjectsIcon from '$lib/navbar/icons/ProjectsIcon.svelte';
-	import ContactIcon from '$lib/navbar/icons/ContactIcon.svelte';
-	import ExpandIcon from '$lib/navbar/icons/ExpandIcon.svelte';
-	import CollapseIcon from '$lib/navbar/icons/CollapseIcon.svelte';
+	import HomeIcon from '$lib/Navbar/icons/HomeIcon.svelte';
+	import RoadMapIcon from '$lib/Navbar/icons/RoadmapIcon.svelte';
+	import EducationIcon from '$lib/Navbar/icons/EducationIcon.svelte';
+	import ProjectsIcon from '$lib/Navbar/icons/ProjectsIcon.svelte';
+	import ContactIcon from '$lib/Navbar/icons/ContactIcon.svelte';
+	import ExpandIcon from '$lib/Navbar/icons/ExpandIcon.svelte';
+	import CollapseIcon from '$lib/Navbar/icons/CollapseIcon.svelte';
 	import { onMount } from 'svelte';
 
 	export let navbarColor = 'white';

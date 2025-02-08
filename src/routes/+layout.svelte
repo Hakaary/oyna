@@ -1,6 +1,6 @@
 <script>
-	import Navbar from '$lib/navbar/Navbar.svelte';
-	import MainShape from '$lib/shapes/MainShape.svelte';
+	import Navbar from '$lib/Navbar/Navbar.svelte';
+	import MainShape from '$lib/Backgrounds/MainShape.svelte';
 	import '../app.css';
 </script>
 

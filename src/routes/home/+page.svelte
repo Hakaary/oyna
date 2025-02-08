@@ -1,5 +1,5 @@
 <script>
-	import TextChanger from '$lib/textChanger/TextChanger.svelte';
+	import TextChanger from '$lib/TextChanger/TextChanger.svelte';
 </script>
 
 <main id="home">
