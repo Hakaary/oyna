@@ -1,5 +1,21 @@
 <script>
 	import TextChanger from '$lib/TextChanger/TextChanger.svelte';
+
+	const words = [
+		'ventana',
+		'fenêtre',
+		'окно',
+		'窗口',
+		'finestra',
+		'raam',
+		'Fenster',
+		'oyna',
+		'vindu',
+		'窓',
+		'fereastră',
+		'window',
+		'fönster'
+	];	
 </script>
 
 <main id="home">
@@ -16,7 +32,7 @@
 		<li class="column-1-element space" />
 		<li class="column-1-element window">
 			<span class="column-1-text window">
-				and this is my <TextChanger color="var(--text-3)" />
+				and this is my <TextChanger color="var(--text-3)" words={words} />
 			</span>
 		</li>
 		<li class="column-1-element window">

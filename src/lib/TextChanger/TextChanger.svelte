@@ -1,28 +1,17 @@
 <script>
 	import { onMount, onDestroy } from 'svelte';
 
-	const words = [
-		'\u00A0ventana',
-		'\u00A0fenêtre',
-		'\u00A0окно',
-		'\u00A0窗口',
-		'\u00A0finestra',
-		'\u00A0raam',
-		'\u00A0Fenster',
-		'\u00A0oyna',
-		'\u00A0vindu',
-		'\u00A0窓',
-		'\u00A0fereastră',
-		'\u00A0window',
-		'\u00A0fönster'
+	export let words = [
+		"example1",
+		"example2",
 	];
-
 	export let color = 'white';
+
+	const space = "\u00A0"
 
 	let currentWordDisplay;
 	let currentIndex = 0;
 	let currentWord = words[currentIndex];
-
 	let interval;
 
 	const shuffleWord = () => {
@@ -30,7 +19,7 @@
 		if (currentIndex >= words.length) {
 			currentIndex = 0;
 		}
-		currentWord = words[currentIndex];
+		currentWord = space + words[currentIndex];
 		currentWordDisplay.textContent = currentWord;
 	};
 
@@ -46,7 +35,7 @@
 </script>
 
 <div id="scroller">
-	<span id="text" bind:this={currentWordDisplay} style="color: {color};">{words[0]}</span>
+	<span id="text" bind:this={currentWordDisplay} style="color: {color};">{space + words[0]}</span>
 </div>
 
 <style>
