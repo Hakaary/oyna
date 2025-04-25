@@ -15,7 +15,7 @@
 		'fereastră',
 		'window',
 		'fönster'
-	];	
+	];
 </script>
 
 <main id="home">
@@ -32,7 +32,7 @@
 		<li class="column-1-element space" />
 		<li class="column-1-element window">
 			<span class="column-1-text window">
-				and this is my <TextChanger color="var(--text-3)" words={words} />
+				and this is my <TextChanger color="var(--text-3)" {words} />
 			</span>
 		</li>
 		<li class="column-1-element window">

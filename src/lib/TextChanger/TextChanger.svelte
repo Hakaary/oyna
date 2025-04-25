@@ -1,13 +1,10 @@
 <script>
 	import { onMount, onDestroy } from 'svelte';
 
-	export let words = [
-		"example1",
-		"example2",
-	];
+	export let words = ['example1', 'example2'];
 	export let color = 'white';
 
-	const space = "\u00A0"
+	const space = '\u00A0';
 
 	let currentWordDisplay;
 	let currentIndex = 0;
