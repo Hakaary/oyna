@@ -1,122 +1,103 @@
 <script>
-	import { onMount } from 'svelte';
+	import LabelProject from '$lib/Labels/LabelProject.svelte';
 
 	let colourIt = 0;
-	let colours = [
-		// "#cd412b",
-		'#9ea5a8',
-		// "#27343a",
-	];
-	const getNextColourIt = () => {
+	let colours = ['rgb(205 65 43 / 50%)', 'rgb(39 52 58 / 90%)'];
+	const getNextColour = () => {
 		return colours[colourIt++ % colours.length];
 	};
+
+	let boxGradColourHover = 'rgb(255 255 255 / 12%)';
 
 	let projects = [
 		{
 			name: 'Manga Reader',
 			url: 'https://github.com/Hakaary/manga-reader',
-			image: '/langs/java.png',
-			wrapper: null,
-			link: null
+			image1: '/langs/java.png',
+			image1YDisplacement: '-35%',
+			image1YDisplacementHover: '-42%',
+			image2: '/langs/java.png',
+			image2YDisplacement: '0%',
+			image2YDisplacementHover: '0%',
+			image2WideStyle: false,
+			boxGradColour: getNextColour()
 		},
 		{
-			name: 'Rust Manga Scrapper',
+			name: 'Manga Web Scrapper',
 			url: 'https://github.com/Hakaary/rust-manga-scrapper',
-			image: '/langs/rust.png',
-			wrapper: null,
-			link: null
+			image1: '/langs/rust.png',
+			image1YDisplacement: '-15%',
+			image1YDisplacementHover: '-30%',
+			image2: '/projects/manga_web_scrapper.png',
+			image2YDisplacement: '0%',
+			image2YDisplacementHover: '-10%',
+			image2WideStyle: true,
+			boxGradColour: getNextColour()
 		},
 		{
-			name: 'Python Snake',
+			name: 'Snake on CLI',
 			url: 'https://github.com/Hakaary/python_snake',
-			image: '/langs/python.png',
-			wrapper: null,
-			link: null
+			image1: '/langs/python.png',
+			image1YDisplacement: '-0.5%',
+			image1YDisplacementHover: '-8%',
+			image2: '/projects/python_snake.png',
+			image2YDisplacement: '-44%',
+			image2YDisplacementHover: '-48%',
+			image2WideStyle: false,
+			boxGradColour: getNextColour()
 		},
 		{
-			name: 'Manga Reader',
-			url: 'https://github.com/Hakaary/manga-reader',
-			image: '/langs/java.png',
-			wrapper: null,
-			link: null
-		},
-		{
-			name: 'Rust Manga Scrapper',
-			url: 'https://github.com/Hakaary/rust-manga-scrapper',
-			image: '/langs/rust.png',
-			wrapper: null,
-			link: null
-		},
-		{
-			name: 'Python Snake',
-			url: 'https://github.com/Hakaary/python_snake',
-			image: '/langs/python.png',
-			wrapper: null,
-			link: null
+			name: 'Portfolio page',
+			url: 'https://github.com/Hakaary/oyna',
+			image1: '/langs/javascript.png',
+			image1YDisplacement: '-25%',
+			image1YDisplacementHover: '-35%',
+			image2: '/langs/javascript.png',
+			image2YDisplacement: '0%',
+			image2YDisplacementHover: '0%',
+			image2WideStyle: false,
+			boxGradColour: getNextColour()
 		}
 	];
-
-	onMount(() => {
-		projects.map((project) => {
-			project.wrapper.addEventListener('mouseenter', () => {
-				project.link.style.transform = 'scaleY(150%)';
-				project.wrapper.style.zIndex = '1';
-			});
-			project.wrapper.addEventListener('mouseleave', () => {
-				project.link.style.transform = 'scaleY(100%)';
-				project.wrapper.style.zIndex = '0';
-			});
-			// project.link.style.transition = "transform 1s";
-			project.wrapper.style.zIndex = '0';
-		});
-	});
 </script>
 
 <main id="projects">
-	{#each projects as project}
-		<div class="project-wrapper" bind:this={project.wrapper}>
-			<a
-				class="project-link"
-				href={project.url}
-				target="_blank"
-				style="background-color: {getNextColourIt()};"
-				bind:this={project.link}
-			>
-			</a>
-			<img class="project-image" src={project.image} alt={project.name} />
-		</div>
-	{/each}
+	<ul class="projects-list">
+		{#each projects as project}
+			<li class="projects-list-element">
+				<LabelProject
+					name={project.name}
+					url={project.url}
+					image1={project.image1}
+					image1YDisplacement={project.image1YDisplacement}
+					image1YDisplacementHover={project.image1YDisplacementHover}
+					image2={project.image2}
+					image2YDisplacement={project.image2YDisplacement}
+					image2YDisplacementHover={project.image2YDisplacementHover}
+					boxGradColour={project.boxGradColour}
+					image2WideStyle={project.image2WideStyle}
+				/>
+			</li>
+		{/each}
+	</ul>
 </main>
 
 <style>
 	#projects {
 		padding: 0px;
-		display: flex;
 		height: 100vh;
+	}
+
+	.projects-list {
+		height: 100%;
+		list-style: none;
+		display: flex;
 		flex-direction: column;
-		justify-content: space-around;
 		overflow: hidden;
 	}
 
-	.project-wrapper {
-		width: 100%;
-		height: 100%;
+	.projects-list-element {
 		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.project-image {
-		position: fixed;
-		height: 270px;
-	}
-
-	.project-link {
-		position: relative;
-		width: 100%;
-		height: 100%;
-		text-decoration: none;
-		color: inherit;
-		background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(255,0,0,0.5));
+		flex: 1;
 	}
 </style>
