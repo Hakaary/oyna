@@ -36,7 +36,7 @@
 		},
 		{
 			name: 'Snake on CLI',
-			url: 'https://github.com/Hakaary/python_snake',
+			url: 'https://github.com/Hakaary/python-snake',
 			image1: '/langs/python.png',
 			image1YDisplacement: '-0.5%',
 			image1YDisplacementHover: '-8%',
