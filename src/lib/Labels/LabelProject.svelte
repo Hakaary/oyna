@@ -22,14 +22,14 @@
 
 	onMount(() => {
 		link.addEventListener('mouseenter', () => {
-			image1Deg.style.background = `linear-gradient(30deg, ${boxGradColourHover} 0.5%, transparent)`;
-			image2Deg.style.background = `linear-gradient(-30deg, ${boxGradColourHover} 0.5%, transparent)`;
+			image1Deg.style.background = `linear-gradient(30deg, ${boxGradColourHover} 20%, transparent)`;
+			image2Deg.style.background = `linear-gradient(-30deg, ${boxGradColourHover} 20%, transparent)`;
 			image1Html.style.transform = `translateY(${image1YDisplacementHover}) scale(${image1Scale})`;
 			image2Html.style.transform = `translateY(${image2YDisplacementHover})`;
 		});
 		link.addEventListener('mouseleave', () => {
-			image1Deg.style.background = `linear-gradient(30deg, ${boxGradColour} 0.5%, transparent)`;
-			image2Deg.style.background = `linear-gradient(-30deg, ${boxGradColour} 0.5%, transparent)`;
+			image1Deg.style.background = `linear-gradient(30deg, ${boxGradColour} 20%, transparent)`;
+			image2Deg.style.background = `linear-gradient(-30deg, ${boxGradColour} 20%, transparent)`;
 			image1Html.style.transform = `translateY(${image1YDisplacement}) scale(${image1Scale})`;
 			image2Html.style.transform = `translateY(${image2YDisplacement})`;
 		});
@@ -61,7 +61,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: linear-gradient(30deg, {boxGradColour} 0.5%, transparent);
+		background: linear-gradient(30deg, {boxGradColour} 20%, transparent);
 		pointer-events: none;
 		"
 			bind:this={image1Deg}
@@ -84,7 +84,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: linear-gradient(-30deg, {boxGradColour} 0.5%, transparent);
+		background: linear-gradient(-30deg, {boxGradColour} 20%, transparent);
 		pointer-events: none;
 		"
 			bind:this={image2Deg}

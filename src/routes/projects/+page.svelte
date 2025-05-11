@@ -7,7 +7,7 @@
 		return colours[colourIt++ % colours.length];
 	};
 
-	let boxGradColourHover = 'rgb(255 255 255 / 12%)';
+	// let boxGradColourHover = 'rgb(90 90 90 / 40%)';
 
 	let projects = [
 		{
