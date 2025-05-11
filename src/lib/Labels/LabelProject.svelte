@@ -6,6 +6,7 @@
 	export let image1;
 	export let image1YDisplacement;
 	export let image1YDisplacementHover;
+	export let image1Scale = "100%";
 	export let image2;
 	export let image2YDisplacement;
 	export let image2YDisplacementHover;
@@ -23,13 +24,13 @@
 		link.addEventListener('mouseenter', () => {
 			image1Deg.style.background = `linear-gradient(30deg, ${boxGradColourHover} 0.5%, transparent)`;
 			image2Deg.style.background = `linear-gradient(-30deg, ${boxGradColourHover} 0.5%, transparent)`;
-			image1Html.style.transform = `translateY(${image1YDisplacementHover})`;
+			image1Html.style.transform = `translateY(${image1YDisplacementHover}) scale(${image1Scale})`;
 			image2Html.style.transform = `translateY(${image2YDisplacementHover})`;
 		});
 		link.addEventListener('mouseleave', () => {
 			image1Deg.style.background = `linear-gradient(30deg, ${boxGradColour} 0.5%, transparent)`;
 			image2Deg.style.background = `linear-gradient(-30deg, ${boxGradColour} 0.5%, transparent)`;
-			image1Html.style.transform = `translateY(${image1YDisplacement})`;
+			image1Html.style.transform = `translateY(${image1YDisplacement}) scale(${image1Scale})`;
 			image2Html.style.transform = `translateY(${image2YDisplacement})`;
 		});
 
@@ -49,7 +50,7 @@
 			class="project-image-lang"
 			src={image1}
 			alt={name}
-			style="transform: translateY({image1YDisplacement})"
+			style="transform: translateY({image1YDisplacement}) scale({image1Scale})"
 			bind:this={image1Html}
 		/>
 		<div
@@ -108,6 +109,7 @@
 		top: 5%;
 		left: 2%;
 		text-transform: uppercase;
+		font-size: 45px;
 	}
 
 	.project-image-box {

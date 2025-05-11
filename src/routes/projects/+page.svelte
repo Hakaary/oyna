@@ -13,12 +13,13 @@
 		{
 			name: 'Manga Reader',
 			url: 'https://github.com/Hakaary/manga-reader',
-			image1: '/langs/java.png',
-			image1YDisplacement: '-35%',
-			image1YDisplacementHover: '-42%',
-			image2: '/langs/java.png',
-			image2YDisplacement: '0%',
-			image2YDisplacementHover: '0%',
+			image1: '/langs/java.svg',
+			image1YDisplacement: '-16%',
+			image1YDisplacementHover: '-30%',
+			image1Scale: "120%",
+			image2: '/projects/manga_reader.png',
+			image2YDisplacement: '-22%',
+			image2YDisplacementHover: '-24%',
 			image2WideStyle: false,
 			boxGradColour: getNextColour()
 		},
@@ -26,11 +27,12 @@
 			name: 'Manga Web Scrapper',
 			url: 'https://github.com/Hakaary/rust-manga-scrapper',
 			image1: '/langs/rust.png',
-			image1YDisplacement: '-15%',
-			image1YDisplacementHover: '-30%',
+			image1YDisplacement: '-25%',
+			image1YDisplacementHover: '-35%',
+			image1Scale: "70%",
 			image2: '/projects/manga_web_scrapper.png',
 			image2YDisplacement: '0%',
-			image2YDisplacementHover: '-10%',
+			image2YDisplacementHover: '-7%',
 			image2WideStyle: true,
 			boxGradColour: getNextColour()
 		},
@@ -38,11 +40,12 @@
 			name: 'Snake on CLI',
 			url: 'https://github.com/Hakaary/python-snake',
 			image1: '/langs/python.png',
-			image1YDisplacement: '-0.5%',
-			image1YDisplacementHover: '-8%',
+			image1YDisplacement: '-18%',
+			image1YDisplacementHover: '-28%',
+			image1Scale: "68%",
 			image2: '/projects/python_snake.png',
 			image2YDisplacement: '-44%',
-			image2YDisplacementHover: '-48%',
+			image2YDisplacementHover: '-46%',
 			image2WideStyle: false,
 			boxGradColour: getNextColour()
 		},
@@ -52,10 +55,11 @@
 			image1: '/langs/javascript.png',
 			image1YDisplacement: '-25%',
 			image1YDisplacementHover: '-35%',
-			image2: '/langs/javascript.png',
+			image1Scale: "80%",
+			image2: '/langs/oyna.png',
 			image2YDisplacement: '0%',
-			image2YDisplacementHover: '0%',
-			image2WideStyle: false,
+			image2YDisplacementHover: '-8%',
+			image2WideStyle: true,
 			boxGradColour: getNextColour()
 		}
 	];
@@ -71,6 +75,7 @@
 					image1={project.image1}
 					image1YDisplacement={project.image1YDisplacement}
 					image1YDisplacementHover={project.image1YDisplacementHover}
+					image1Scale={project.image1Scale}
 					image2={project.image2}
 					image2YDisplacement={project.image2YDisplacement}
 					image2YDisplacementHover={project.image2YDisplacementHover}
